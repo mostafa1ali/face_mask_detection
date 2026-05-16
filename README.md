@@ -135,38 +135,5 @@ python detect.py --source clip.mp4    # video
 | Recall    | ~96%          |
 | F1 Score  | ~97%          |
 
----
-
-## 🔑 Key Concepts to Know for Exam
-
-**Q: Why do we use a Haar Cascade for face detection instead of CNN?**  
-A: The Haar Cascade is fast and already trained — we use it as a preprocessing step to find WHERE faces are, then our CNN classifies each face crop.
-
-**Q: What is BatchNorm and why use it?**  
-A: Batch Normalization normalizes the output of each layer to have zero mean and unit variance. This stabilizes training, allows higher learning rates, and acts as a mild regularizer.
-
-**Q: What is Dropout?**  
-A: Randomly sets a fraction of neurons to zero during training. This prevents co-adaptation (overfitting) and forces the network to learn redundant representations.
-
-**Q: Why normalize images with ImageNet mean/std?**  
-A: Our CNN architecture expects inputs in the same scale as the data it was designed for. Normalization also helps gradient flow during training.
-
-**Q: What does CrossEntropyLoss do?**  
-A: It combines LogSoftmax + NLLLoss. For classification, it penalizes the model when it assigns low probability to the correct class.
-
-**Q: Class 0 vs Class 1 — which is which?**  
-A: Class 0 = With Mask, Class 1 = Without Mask.
-
----
-
-## 👥 Team Split Suggestion (if submitting as group)
-
-| Member | Responsibility                                        |
-|--------|-------------------------------------------------------|
-| 1      | model.py — CNN Architecture, train.py — Training Loop |
-| 2      | dataset.py — Data Loading, evaluate.py — Metrics & CM |
-| 3      | detect.py — Real-time Demo                            |
-
----
 
 *Project built with PyTorch + OpenCV*
