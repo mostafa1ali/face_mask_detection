@@ -1,5 +1,4 @@
 # 😷 Face Mask Detection Project
-### Computer Vision — Practical Exam Project
 
 ---
 
