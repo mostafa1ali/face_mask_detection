@@ -1,0 +1,9 @@
+__pycache__/
+*.pyc
+*.rar
+*.zip
+*.pdf
+data/
+just_me_in_gym.jpg
+mask-myths.jpg
+result_*
